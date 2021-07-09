@@ -1,0 +1,10 @@
+# Local host for CSS dev
+version: "3.4"
+
+services:
+  nginx-proxy:
+    image: nginx:1
+    volumes:
+      - ~/Development/Home/legion-roam-research/dev/roamresearch.com/assets/css/less-compiled:/usr/share/nginx/html:ro
+    ports:
+      - 8080:80
