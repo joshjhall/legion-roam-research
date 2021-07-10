@@ -4,26 +4,7 @@
 > Created by Joshua Hall
 > v1.0.0
 */
-@font-face {
-  font-family: 'Lexend';
-  src: url('https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].woff2')
-      format('woff2'),
-    url('https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].tff')
-      format('truetype');
-  font-style: normal;
-  font-optical-sizing: auto;
-}
-
-@font-face {
-  font-family: 'Roboto Mono';
-  src: url('https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].woff2')
-      format('woff2'),
-    url('https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].tff')
-      format('truetype');
-  font-style: normal;
-  font-optical-sizing: auto;
-}
-
+/* Global theme assets */
 /**
  * Retrieves a color value from the $material-colors Sass map
  * Inspired by https://github.com/nilskaspersson/Google-Material-UI-Color-Palette/
@@ -34,67 +15,73 @@
  * @param {string} [color-variant='500']  - quoted, lowercase color variant (e.g.
  *                                          '200', 'a100')
  */
-/* Icons */
-.bp3-button > sub {
-  color: var(--filter__color_subscript);
+/* Typography */
+textarea {
+  font-family: var(--main-font__font-family);
+  font-variation-settings: var(--main-font__font-variation-settings);
 }
 
-.bp3-button .bp3-icon {
-  color: var(--icon__color);
+h1 textarea {
+  font-size: 36px;
 }
 
-.bp3-button .bp3-icon-standard {
-  color: var(--icon__color);
+.roam-body .roam-app {
+  color: var(--main-font__color);
+}
+.roam-body .roam-app h1 {
+  color: var(--h1__color);
+}
+.roam-body .roam-app .roam-article div {
+  font-family: var(--main-font__font-family);
+  font-variation-settings: var(--main-font__font-variation-settings);
 }
 
-.bp3-button .bp3-icon-large {
-  color: var(--icon__color);
-}
-
-.bp3-button:before {
-  color: var(--icon__color);
-}
-
-.bp3-button:focus {
-  outline: var(--icon__color) auto 2px;
-}
-
-.bp3-button.bp3-minimal {
-  color: var(--icon__color);
-  font-weight: 700;
-}
-.bp3-button.bp3-minimal:hover {
-  background-color: var(--icon__background-color_hover);
-  color: var(--icon__color_hover) !important;
-}
-
-.bp3-button:hover .bp3-icon {
-  color: var(--icon__color_hover) !important;
-}
-
-.bp3-button:not([class*='bp3-intent-']) {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  background-color: transparent;
-  background-image: none;
-  color: var(--icon__color);
-  font-weight: 700;
-}
-.bp3-button:not([class*='bp3-intent-']):hover {
-  background-color: var(--icon__background-color_hover);
-  color: var(--icon__color_hover) !important;
-}
-
-.bp3-button[class*='bp3-icon-']::before {
+/* Navigation icons */
+.rm-topbar .bp3-button[class*='bp3-icon-']::before,
+.rm-topbar .bp3-button .bp3-icon,
+.rm-topbar .bp3-input-group[class*='bp3-icon-']::before,
+.rm-topbar .bp3-input-group .bp3-icon,
+.roam-sidebar-container .bp3-button[class*='bp3-icon-']::before,
+.roam-sidebar-container .bp3-button .bp3-icon {
   color: inherit;
 }
 
-.bp3-icon-star:before {
-  color: var(--icon__color);
+.rm-topbar .bp3-button {
+  color: var(--topbar_icon__color);
+}
+.rm-topbar .bp3-button:hover {
+  color: var(--topbar_icon__color_hover);
+  background-color: var(--topbar_icon__background-color_hover);
+}
+.rm-topbar .bp3-button:focus {
+  outline: var(--topbar_icon__color) auto 2px;
 }
 
-.rm-block-main .bp3-button:not([class*='bp3-intent-']) {
-  min-height: 25px;
+.rm-topbar .bp3-input-group {
+  color: var(--topbar_icon__color);
+  font-family: var(--main-font__font-family);
+  font-variation-settings: var(--main-font__font-variation-settings);
+}
+.rm-topbar .bp3-input-group:hover {
+  color: var(--topbar_icon__color_hover);
+}
+.rm-topbar .bp3-input-group:hover input {
+  color: var(--main-font__color);
+  background-color: var(--topbar_search__background-color_hover);
+}
+.rm-topbar .bp3-input-group ::placeholder {
+  color: var(--topbar_search__placeholder-color);
+}
+
+.roam-sidebar-container .bp3-button {
+  color: var(--sidebar-icon__color) !important;
+}
+.roam-sidebar-container .bp3-button:hover {
+  color: var(--sidebar-icon__color_hover) !important;
+  background-color: var(--sidebar-icon__background-color_hover);
+}
+.roam-sidebar-container .bp3-button:focus {
+  outline: var(--sidebar-icon__color) auto 2px;
 }
 
 .rm-displaced-button {
@@ -102,6 +89,46 @@
 }
 
 @media (prefers-color-scheme: light) {
+  @font-face {
+    font-family: 'Lexend';
+    src: url('https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].woff2')
+        format('woff2'),
+      url('https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].tff')
+        format('truetype');
+    font-weight: 415;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+  @font-face {
+    font-family: 'Lexend';
+    src: url('https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].woff2')
+        format('woff2'),
+      url('https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].tff')
+        format('truetype');
+    font-weight: 810;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+  @font-face {
+    font-family: 'Roboto Mono';
+    src: url('https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].woff2')
+        format('woff2'),
+      url('https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].tff')
+        format('truetype');
+    font-weight: 420;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+  @font-face {
+    font-family: 'Roboto Mono';
+    src: url('https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].woff2')
+        format('woff2'),
+      url('https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].tff')
+        format('truetype');
+    font-weight: 630;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
   :root {
     /* Roam default variables */
     --primary-color: #137cbd;
@@ -196,7 +223,7 @@
     /* layout */
     /* body */
     --body__background-color: #fff;
-    --main-font__color: #202b33;
+    --main-font__color: rgba(0, 0, 0, 0.87);
     --main-font__font-family: Lexend, -apple-system, BlinkMacSystemFont, 'Segoe UI',
       Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --main-font__font-size: 14px;
@@ -258,17 +285,17 @@
     --h1__color_link: var(--page-link__color);
     --h1__font-family: var(--main-font__font-family);
     --h1__font-size: 1.8rem;
-    --h1__font-weight: 415;
+    --h1__font-weight: 400;
     --h2__color: #202b33;
     --h2__color_link: var(--page-link__color);
     --h2__font-family: var(--h1__font-family);
     --h2__font-size: 1.4rem;
-    --h2__font-weight: 415;
+    --h2__font-weight: 400;
     --h3__color: #5c7080;
     --h3__color_link: var(--page-link__color);
     --h3__font-family: var(--h1__font-family);
     --h3__font-size: 1.2rem;
-    --h2__font-weight: 610;
+    --h3__font-weight: 500;
     --highlight__background-color: #fef09f;
     --highlight__color: inherit;
     --highlight-link-color: inherit;
@@ -300,10 +327,15 @@
     --pages-search-field__border-color: #8a9ba8;
     --pages-table__border-color: #e1e8ed;
     --pages-header__color_sorted: #5c7080;
-    /* icons */
-    --icon__background-color_hover: rgba(167, 182, 194, 0.3);
-    --icon__color: #2196f3;
-    --icon__color_hover: #ba68c8;
+    /* navigation icons */
+    --topbar_icon__background-color_hover: #efebe9;
+    --topbar_icon__color: #8d6e63;
+    --topbar_icon__color_hover: #6d4c41;
+    --topbar_search__placeholder-color: rgba(121, 85, 72, 0.54);
+    --topbar_search__background-color_hover: rgba(239, 235, 233, 0.54);
+    --sidebar-icon__background-color_hover: #4e342e;
+    --sidebar-icon__color: #8d6e63;
+    --sidebar-icon__color_hover: #bcaaa4;
     --filter__color_subscript: #182026;
   }
   /*
@@ -406,7 +438,7 @@
     /* layout */
     /* body */
     --body__background-color: #fff;
-    --main-font__color: #202b33;
+    --main-font__color: rgba(0, 0, 0, 0.87);
     --main-font__font-family: Lexend, -apple-system, BlinkMacSystemFont, 'Segoe UI',
       Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --main-font__font-size: 14px;
@@ -468,17 +500,17 @@
     --h1__color_link: var(--page-link__color);
     --h1__font-family: var(--main-font__font-family);
     --h1__font-size: 1.8rem;
-    --h1__font-weight: 415;
+    --h1__font-weight: 400;
     --h2__color: #202b33;
     --h2__color_link: var(--page-link__color);
     --h2__font-family: var(--h1__font-family);
     --h2__font-size: 1.4rem;
-    --h2__font-weight: 415;
+    --h2__font-weight: 400;
     --h3__color: #5c7080;
     --h3__color_link: var(--page-link__color);
     --h3__font-family: var(--h1__font-family);
     --h3__font-size: 1.2rem;
-    --h2__font-weight: 610;
+    --h3__font-weight: 500;
     --highlight__background-color: #fef09f;
     --highlight__color: inherit;
     --highlight-link-color: inherit;
@@ -510,10 +542,15 @@
     --pages-search-field__border-color: #8a9ba8;
     --pages-table__border-color: #e1e8ed;
     --pages-header__color_sorted: #5c7080;
-    /* icons */
-    --icon__background-color_hover: rgba(167, 182, 194, 0.3);
-    --icon__color: #2196f3;
-    --icon__color_hover: #ba68c8;
+    /* navigation icons */
+    --topbar_icon__background-color_hover: #efebe9;
+    --topbar_icon__color: #8d6e63;
+    --topbar_icon__color_hover: #6d4c41;
+    --topbar_search__placeholder-color: rgba(121, 85, 72, 0.54);
+    --topbar_search__background-color_hover: rgba(239, 235, 233, 0.54);
+    --sidebar-icon__background-color_hover: #4e342e;
+    --sidebar-icon__color: #8d6e63;
+    --sidebar-icon__color_hover: #bcaaa4;
     --filter__color_subscript: #182026;
   }
   /* components */
@@ -523,6 +560,46 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  @font-face {
+    font-family: 'Lexend';
+    src: url('https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].woff2')
+        format('woff2'),
+      url('https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].tff')
+        format('truetype');
+    font-weight: 415;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+  @font-face {
+    font-family: 'Lexend';
+    src: url('https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].woff2')
+        format('woff2'),
+      url('https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].tff')
+        format('truetype');
+    font-weight: 810;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+  @font-face {
+    font-family: 'Roboto Mono';
+    src: url('https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].woff2')
+        format('woff2'),
+      url('https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].tff')
+        format('truetype');
+    font-weight: 420;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+  @font-face {
+    font-family: 'Roboto Mono';
+    src: url('https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].woff2')
+        format('woff2'),
+      url('https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].tff')
+        format('truetype');
+    font-weight: 630;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
   :root {
     /* Roam default variables */
     --primary-color: #137cbd;
