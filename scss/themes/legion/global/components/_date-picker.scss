@@ -1,0 +1,57 @@
+/* Date picker */
+
+// Date picker button
+.bp3-icon-calendar {
+  // Ensure icon inherits the button color correctly
+  &[class*="bp3-icon-"]::before, & .bp3-icon {
+    color: inherit !important;
+  }
+
+  // Icon button state
+  color: var(--icon__color) !important;
+
+  // Icon button hover state
+  &:hover {
+    color: var(--icon__color_hover) !important;
+    background-color: var(--icon__background-color_hover) !important;
+  }
+
+  // Icon button focus state
+  &:focus {
+    outline: var(--icon__color) auto 2px;
+  }
+}
+
+
+.bp3-datepicker .DayPicker-Day {
+  &.DayPicker-Day--isToday .bp3-datepicker-day-wrapper {
+    border: 1px solid var(--datepicker-today__border);
+  }
+
+  &.DayPicker-Day--outside {
+    color: var(--datepicker__color_other-month);
+  }
+
+  &:hover,
+  &:focus {
+    background: var(--datepicker-day__background_hover);
+    color: var(--datepicker-day__color_hover);
+  }
+}
+
+.bp3-popover .bp3-popover-content .bp3-datepicker {
+  background-color: var(--datepicker__background-color);
+  color: var(--datepicker__color);
+}
+
+/* Month and year selectors */
+
+.bp3-html-select.bp3-minimal select {
+  background-color: var(--menu__background) !important;
+  color: var(--menu__color);
+
+  &:hover {
+    background: var(--icon__background-color_hover);
+    color: var(--menu__color);
+  }
+}
