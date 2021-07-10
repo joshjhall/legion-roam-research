@@ -5,6 +5,7 @@ body {
   caret-color: var(--caret__color);
   font-family: var(--main-font__font-family);
   font-size: var(--main-font__font-size);
+  font-variation-settings: var(--main-font__font-variation-settings);
 }
 
 .rm-block-input,
@@ -18,6 +19,11 @@ body {
   .rm-bullet__inner {
     background-color: var(--bullet__background-color);
   }
+}
+.controls,
+.rm-block__controls {
+  // padding-top: 0.4em;
+  // align-self: center;
 }
 
 .rm-bullet.rm-bullet--closed {

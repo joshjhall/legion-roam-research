@@ -1,3 +1,12 @@
+/* Light theme variables */
+
+// Compiler variables
+$background-color-family__light: 'brown';
+$main-font__font-weight__normal-light: 415;
+$main-font__font-weight__bold-light: 610;
+$code-font__font-weight__normal-light: 420;
+$code-font__font-weight__bold-light: 630;
+
 :root {
   /* Roam default variables */
 
@@ -248,13 +257,13 @@
 
   /* navigation icons */
   // --icon__background-color_hover: #{transparentize(material-color('brown', '900'), .90)};
-  --topbar_icon__background-color_hover: #{material-color($background-color-family, '50')};
-  --topbar_icon__color: #{material-color($background-color-family, '400')};
-  --topbar_icon__color_hover: #{material-color($background-color-family, '600')};
-  --topbar_search__placeholder-color: #{transparentize(material-color($background-color-family, '500'), .46)};
-  --topbar_search__background-color_hover: #{transparentize(material-color($background-color-family, '50'), .46)};
-  --sidebar-icon__background-color_hover: #{material-color($background-color-family, '800')};
-  --sidebar-icon__color: #{material-color($background-color-family, '400')};
-  --sidebar-icon__color_hover: #{material-color($background-color-family, '200')};
+  --topbar_icon__background-color_hover: #{material-color($background-color-family__light, '50')};
+  --topbar_icon__color: #{material-color($background-color-family__light, '400')};
+  --topbar_icon__color_hover: #{material-color($background-color-family__light, '600')};
+  --topbar_search__placeholder-color: #{transparentize(material-color($background-color-family__light, '500'), .46)};
+  --topbar_search__background-color_hover: #{transparentize(material-color($background-color-family__light, '50'), .46)};
+  --sidebar-icon__background-color_hover: #{material-color($background-color-family__light, '800')};
+  --sidebar-icon__color: #{material-color($background-color-family__light, '400')};
+  --sidebar-icon__color_hover: #{material-color($background-color-family__light, '200')};
   --filter__color_subscript: #182026;
 }

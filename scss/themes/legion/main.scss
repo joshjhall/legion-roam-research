@@ -5,79 +5,77 @@
 > v1.0.0
 */
 
-// Compiler variables
-// $color-family: 'blue';
-$background-color-family: 'brown';
-
 // Global assets
-@import 'global/main';
+@import '../../core/index';
 
 @media (prefers-color-scheme: light) {
-  @font-face {
-    font-family: "Lexend";
-    src: url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].tff") format("truetype");
-    font-weight: 415;
-    font-style: normal;
-    font-optical-sizing: auto;
-  }
-  @font-face {
-    font-family: "Lexend";
-    src: url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].tff") format("truetype");
-    font-weight: 810;
-    font-style: normal;
-    font-optical-sizing: auto;
-  }
-
-  @font-face {
-    font-family: "Roboto Mono";
-    src: url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].tff") format("truetype");
-    font-weight: 420;
-    font-style: normal;
-    font-optical-sizing: auto;
-  }
-  @font-face {
-    font-family: "Roboto Mono";
-    src: url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].tff") format("truetype");
-    font-weight: 630;
-    font-style: normal;
-    font-optical-sizing: auto;
-  }
-
   @import 'light/variables';
+
+  @font-face {
+    font-family: "Lexend";
+    src: url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].tff") format("truetype");
+    font-weight: $main-font__font-weight__normal-light;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+  @font-face {
+    font-family: "Lexend";
+    src: url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].tff") format("truetype");
+    font-weight: $main-font__font-weight__bold-light;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+
+  @font-face {
+    font-family: "Roboto Mono";
+    src: url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].tff") format("truetype");
+    font-weight: $code-font__font-weight__normal-light;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+  @font-face {
+    font-family: "Roboto Mono";
+    src: url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].tff") format("truetype");
+    font-weight: $code-font__font-weight__bold-light;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+
   @import 'light/main';
 }
 
 @media (prefers-color-scheme: dark) {
-  @font-face {
-    font-family: "Lexend";
-    src: url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].tff") format("truetype");
-    font-weight: 415;
-    font-style: normal;
-    font-optical-sizing: auto;
-  }
-  @font-face {
-    font-family: "Lexend";
-    src: url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].tff") format("truetype");
-    font-weight: 810;
-    font-style: normal;
-    font-optical-sizing: auto;
-  }
-
-  @font-face {
-    font-family: "Roboto Mono";
-    src: url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].tff") format("truetype");
-    font-weight: 420;
-    font-style: normal;
-    font-optical-sizing: auto;
-  }
-  @font-face {
-    font-family: "Roboto Mono";
-    src: url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].tff") format("truetype");
-    font-weight: 630;
-    font-style: normal;
-    font-optical-sizing: auto;
-  }
-
   @import 'dark/variables';
+
+  @font-face {
+    font-family: "Lexend";
+    src: url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].tff") format("truetype");
+    font-weight: $main-font__font-weight__normal-dark;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+  @font-face {
+    font-family: "Lexend";
+    src: url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].tff") format("truetype");
+    font-weight: $main-font__font-weight__bold-dark;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+
+  @font-face {
+    font-family: "Roboto Mono";
+    src: url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].tff") format("truetype");
+    font-weight: $code-font__font-weight__normal-dark;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+  @font-face {
+    font-family: "Roboto Mono";
+    src: url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].tff") format("truetype");
+    font-weight: $code-font__font-weight__bold-dark;
+    font-style: normal;
+    font-optical-sizing: auto;
+  }
+
   @import 'dark/main';
 }

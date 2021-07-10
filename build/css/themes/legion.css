@@ -693,8 +693,8 @@ h1 textarea {
     --version-bullet__border: rgb(16, 107, 163);
     /* layout */
     /* body */
-    --body__background-color: #fff;
-    --main-font__color: #202b33;
+    --body__background-color: #212121;
+    --main-font__color: rgba(255, 255, 255, 1);
     --main-font__font-family: Lexend, -apple-system, BlinkMacSystemFont, 'Segoe UI',
       Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --main-font__font-size: 14px;
@@ -756,17 +756,17 @@ h1 textarea {
     --h1__color_link: var(--page-link__color);
     --h1__font-family: var(--main-font__font-family);
     --h1__font-size: 1.8rem;
-    --h1__font-weight: 415;
+    --h1__font-weight: 400;
     --h2__color: #202b33;
     --h2__color_link: var(--page-link__color);
     --h2__font-family: var(--h1__font-family);
     --h2__font-size: 1.4rem;
-    --h2__font-weight: 415;
+    --h2__font-weight: 400;
     --h3__color: #5c7080;
     --h3__color_link: var(--page-link__color);
     --h3__font-family: var(--h1__font-family);
     --h3__font-size: 1.2rem;
-    --h2__font-weight: 610;
+    --h3__font-weight: 500;
     --highlight__background-color: #fef09f;
     --highlight__color: inherit;
     --highlight-link-color: inherit;
@@ -798,10 +798,15 @@ h1 textarea {
     --pages-search-field__border-color: #8a9ba8;
     --pages-table__border-color: #e1e8ed;
     --pages-header__color_sorted: #5c7080;
-    /* icons */
-    --icon__background-color_hover: rgba(167, 182, 194, 0.3);
-    --icon__color: #9e9e9e;
-    --icon__color_hover: #81c784;
+    /* navigation icons */
+    --topbar_icon__background-color_hover: #fafafa;
+    --topbar_icon__color: #bdbdbd;
+    --topbar_icon__color_hover: #757575;
+    --topbar_search__placeholder-color: rgba(158, 158, 158, 0.54);
+    --topbar_search__background-color_hover: rgba(250, 250, 250, 0.54);
+    --sidebar-icon__background-color_hover: #424242;
+    --sidebar-icon__color: #bdbdbd;
+    --sidebar-icon__color_hover: #eeeeee;
     --filter__color_subscript: #182026;
   }
   /*
@@ -903,8 +908,8 @@ h1 textarea {
     --version-bullet__border: rgb(16, 107, 163);
     /* layout */
     /* body */
-    --body__background-color: #fff;
-    --main-font__color: #202b33;
+    --body__background-color: #212121;
+    --main-font__color: rgba(255, 255, 255, 1);
     --main-font__font-family: Lexend, -apple-system, BlinkMacSystemFont, 'Segoe UI',
       Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --main-font__font-size: 14px;
@@ -966,17 +971,17 @@ h1 textarea {
     --h1__color_link: var(--page-link__color);
     --h1__font-family: var(--main-font__font-family);
     --h1__font-size: 1.8rem;
-    --h1__font-weight: 415;
+    --h1__font-weight: 400;
     --h2__color: #202b33;
     --h2__color_link: var(--page-link__color);
     --h2__font-family: var(--h1__font-family);
     --h2__font-size: 1.4rem;
-    --h2__font-weight: 415;
+    --h2__font-weight: 400;
     --h3__color: #5c7080;
     --h3__color_link: var(--page-link__color);
     --h3__font-family: var(--h1__font-family);
     --h3__font-size: 1.2rem;
-    --h2__font-weight: 610;
+    --h3__font-weight: 500;
     --highlight__background-color: #fef09f;
     --highlight__color: inherit;
     --highlight-link-color: inherit;
@@ -1008,10 +1013,15 @@ h1 textarea {
     --pages-search-field__border-color: #8a9ba8;
     --pages-table__border-color: #e1e8ed;
     --pages-header__color_sorted: #5c7080;
-    /* icons */
-    --icon__background-color_hover: rgba(167, 182, 194, 0.3);
-    --icon__color: #9e9e9e;
-    --icon__color_hover: #81c784;
+    /* navigation icons */
+    --topbar_icon__background-color_hover: #fafafa;
+    --topbar_icon__color: #bdbdbd;
+    --topbar_icon__color_hover: #757575;
+    --topbar_search__placeholder-color: rgba(158, 158, 158, 0.54);
+    --topbar_search__background-color_hover: rgba(250, 250, 250, 0.54);
+    --sidebar-icon__background-color_hover: #424242;
+    --sidebar-icon__color: #bdbdbd;
+    --sidebar-icon__color_hover: #eeeeee;
     --filter__color_subscript: #182026;
   }
   /* components */

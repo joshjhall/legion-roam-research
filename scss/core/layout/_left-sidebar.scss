@@ -1,37 +1,61 @@
 /* Left sidebar */
 
-.roam-body {
-  .roam-app {
-    .roam-sidebar-container {
-      background-color: var(--left-sidebar__background-color);
-
-      .roam-sidebar-content {
-        .log-button {
-          color: var(--left-sidebar__color);
-          font-size: var(--left-sidebar__font-size);
-
-          &:hover {
-            background-color: var(--left-sidebar__background-color_hover);
-            color: var(--left-sidebar__color_hover);
-          }
-        }
-
-        .starred-pages-wrapper {
-          color: var(--left-sidebar-shortcuts__color_title);
-
-          .starred-pages {
-            .page {
-              color: var(--left-sidebar-shortcuts__color);
-              font-size: var(--left-sidebar-shortcuts__font-size);
-
-              &:hover {
-                background-color: var(--left-sidebar__background-color_hover);
-                color: var(--left-sidebar__color_hover);
-              }
-            }
-          }
-        }
-      }
-    }
+// Ensure icon inherits the button color correctly
+.roam-sidebar-container .bp3-button {
+  &[class*="bp3-icon-"]::before, & .bp3-icon {
+    color: inherit;
   }
 }
+
+// Sidebar navigation icons
+.roam-sidebar-container .bp3-button {
+  // Icon button state
+  color: var(--sidebar-icon__color) !important;
+
+  // Icon button hover state
+  &:hover {
+    color: var(--sidebar-icon__color_hover) !important;
+    background-color: var(--sidebar-icon__background-color_hover);
+  }
+
+  // Icon button focus state
+  &:focus {
+    outline: var(--sidebar-icon__color) auto 2px;
+  }
+}
+
+// .roam-body {
+//   .roam-app {
+//     .roam-sidebar-container {
+//       background-color: var(--left-sidebar__background-color);
+
+//       .roam-sidebar-content {
+//         .log-button {
+//           color: var(--left-sidebar__color);
+//           font-size: var(--left-sidebar__font-size);
+
+//           &:hover {
+//             background-color: var(--left-sidebar__background-color_hover);
+//             color: var(--left-sidebar__color_hover);
+//           }
+//         }
+
+//         .starred-pages-wrapper {
+//           color: var(--left-sidebar-shortcuts__color_title);
+
+//           .starred-pages {
+//             .page {
+//               color: var(--left-sidebar-shortcuts__color);
+//               font-size: var(--left-sidebar-shortcuts__font-size);
+
+//               &:hover {
+//                 background-color: var(--left-sidebar__background-color_hover);
+//                 color: var(--left-sidebar__color_hover);
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
