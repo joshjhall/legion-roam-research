@@ -5,21 +5,36 @@
 > v1.0.0
 */
 
-// Optional vanilla roam variable import
-// @import '../../core/variables-vanilla-roam';
+@font-face {
+  font-family: "Lexend";
+  src: url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/Lexend[LXND,wght].tff") format("truetype");
+  font-style: normal;
+  font-optical-sizing: auto;
+}
 
-@import 'variables';
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].woff2") format("woff2"), url("https://joshjhall.github.io/legion-roam-research/fonts/RobotoMono[wght].tff") format("truetype");
+  font-style: normal;
+  font-optical-sizing: auto;
+}
 
-@import '../../core/index';
+// Global assets
+@import 'global/material-colors';
+@import 'global/resources';
+@import 'global/icons';
+@import 'global/mixins';
+@import 'global/reset';
 
-/* components */
-// @import 'components/block-reference';
+// Global variables
+// $color-family: 'blue';
 
-/* layout */
-// @import 'layout/typography';
+@media (prefers-color-scheme: light) {
+  @import 'light/variables';
+  @import 'light/main';
+}
 
-/* pages */
-// @import 'pages/all-pages';
-
-/* features */
-// @import '../../features/editor/rainbow-indents/index';
+@media (prefers-color-scheme: dark) {
+  @import 'dark/variables';
+  @import 'dark/main';
+}
